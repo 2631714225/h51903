@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+		<link rel="icon" href="../images/logo.ico" type="../image/x-icon" />
+		
+		</script>
+		<style>
+			input:nth-of-type(2){
+				display:block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="registers">
+			<div class="register">
+				<div class="logo">
+					<img src="../images/register-img/yicon1.png" alt="" />
+				</div>
+				
+				
+				
+				<h2>注册小米账号</h2>
+				<form method="post">
+				<div class="r-news">
+					<p>国家/地区</p>
+					
+					<div class="inp1"><span>中国</span>
+						<ul>
+							<li></li>
+							<li>Andorra</li>
+							<li>Andorra</li>
+							<li>Antigua and Barbuda</li>
+							<li>Anguilla</li>
+							<li>Belize</li>
+						</ul>
+						<span><img src="../images/register-img/yicon4.png" alt="" /></span>
+					</div>
+					
+					<p>成功注册帐号后，国家/地区将不能被修改</p>
+					<h5></h5>
+					<p>手机号码</p>
+					<div class="inp2">
+						<div class="box0">+86
+							<ul>
+								<li>1</li>
+								<li>2</li>
+								<li>3</li>
+								<li>4</li>
+								<li>5</li>
+							</ul>
+						</div><input name="uphone" type="text" placeholder="请输入手机号码"/>
+						
+						
+					</div>
+					<h6></h6>
+					
+					</div>
+					<div class="box">
+					<input type="submit" value="立即注册" class="mask1"/>
+				</div>
+						
+					<div class="inp3">
+						<input type="checkbox" name="check"/><p>注册帐号即表示您同意并愿意遵守小米<a href="">用户协议</a>和<a href="">隐私政策</a>
+				</div>
+				</form>
+			</div>
+			<div class="foot">
+			<ul>
+				<li><a href="">简体</a></li>
+				<li><a href="">繁体</a></li>
+				<li><a href="">English</a></li>
+				<li><a href="">常见问题</a></li>
+			</ul>
+			<p><span>小米公司版权所有-京ICP备10046444-</span><span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134"><img src="../images/register-img/yicon2.png" alt="" /></a><span>京公网安备11010802020134号-京ICP证110507号</span></span></p>
+		</div>
+		</div>
+		<script src="../js/jquery-1.11.3.min.js"></script>
+		<script src="../validate/jquery.validate.js"></script>
+		<script src="../validate/messages_zh.js"></script>
+		
+		<script type="text/javascript">
+			$(".inp1").click(()=>{
+				$(".inp1 ul").slideToggle(1000,function(){
+					$(".inp1 ul li").click(function(){
+					$(".inp1 span:first").html($(this).html())
+				})
+				});
+			})
+			$(".box0").click(()=>{
+				$(".box0 ul").slideToggle(1000,function(){
+					$(".box0 ul li").click(function(){
+					$(".box0").html($(this).html())
+				})
+				});
+				
+			})
+			$("form").validate({
+				rules:{
+					uphone:{
+							required:true,
+							userphone:true,
+					},
+					check:{
+						required:true,
+						usercheck:true,
+					}
+					
+				},
+				success:function(succ,element){
+					if(element.name=="uphone"){
+						succ.text("输入正确").addClass("success");
+					}
+					if($("input:last").checked){
+						succ.text("").addClass("success");
+					}
+					
+					}
+			})
+			jQuery.validator.addMethod("usercheck",function(value,element){
+				if($("input:last").checked==false){
+					$(element).next().removeClass("success");
+					
+				}
+				return $("input:last").is(':checked');
+			},"未选中");
+			jQuery.validator.addMethod("userphone",function(value,element){
+				var unamereg=/^1[345678]\d{9}$/;
+				if(unamereg.test(value)==false){
+					$(element).next().removeClass("success");
+				}
+				return unamereg.test(value);
+			},"请输入正确的手机号");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,201 @@
+body,ul,h2,h3,h4,h5,p{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*footer*/
+footer{
+	width: 1200px;
+    margin:0 auto;
+}
+footer .footer-service{
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;	
+}
+.footer-service>ul{
+	overflow: hidden;
+}
+.footer-service>ul>li{
+	float: left;
+    width: 19.8%;
+    height: 25px;
+    border-left: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+.footer-service>ul>li:hover a{
+	color: #ff6700;
+}
+.footer-service>ul>li:nth-of-type(1){
+	border:0;
+}
+.footer-service>ul>li>a{
+	color: #616161;
+    transition: all .2s;
+}
+.footer-service>ul>li>.iconfont{
+	margin-right: 6px;
+    font-size: 24px;
+    line-height: 24px;
+    vertical-align: -4px;
+}
+
+.footer-links{
+	padding: 40px 0;
+	overflow: hidden;
+}
+.footer-list{
+	float: left;
+    width: 160px;
+    height: 112px;
+}
+.footer-list>dt{
+	margin: -1px 0 26px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #424242;
+}
+.footer-list>dd{
+    margin: 10px 0 0;
+    font-size: 12px;	
+}
+.footer-list>dd:hover a{
+	color: #ff6700;
+}
+.footer-list>dd>a{
+	color: #757575;
+	transition: all .2s;
+}
+
+.footer-concact{
+	float: right;
+    width: 238px;
+    height: 112px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+}
+.footer-concact>p:nth-of-type(1){
+	margin: 0 0 5px;
+    font-size: 22px;
+    line-height: 1;
+    color: #ff6700;
+}
+.footer-concact>p{
+    margin: 0 0 16px;
+    font-size: 12px;	
+}
+.footer-concact>a{
+	border:1px solid #ff6700;
+    background: #fff;
+    color: #ff6700;
+    width: 118px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    display: inline-block;
+    transition: all .5s;
+}
+.footer-concact>a:hover{
+	background: #ff6700;
+	color: #fff;
+}
+.footer-concact>a>i{
+	margin:0 4px 0 0;
+}
+.foot-info{
+    padding: 30px 0;
+    font-size: 12px;
+    background: #fafafa;	
+}
+.footer-center{
+	margin: 0 auto ;
+	width: 1200px;
+    overflow: hidden;
+}
+.footer-center>.foot-logo{
+    width: 57px;
+    height: 57px;
+    margin-right: 10px;
+    float: left;
+}
+.footer-center .info-text{
+    color: #b0b0b0;
+    padding-left: 67px;
+}
+.footer-center .info-text .sites{
+    margin: 0;
+    line-height: 18px;
+    display: flex;
+}
+.footer-center .info-text .sites>a{
+    color: #757575;	
+}
+.footer-center .info-text .sites>a:hover{
+	color: #ff6700;
+}
+.footer-center .info-text .sites>span{
+	margin: 0 .25em;
+}
+.info-links{
+	width: 1066px;
+	margin: 4px auto;
+	height: 28px;
+}    
+.info-links img{
+	height: 28px;
+	cursor: pointer;
+}
+.slogan{
+    margin: 30px auto 0;
+    width: 267px;
+    height: 19px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/foot-font/iconfont.eot');
+  src: url('../font/foot-font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../font/foot-font/iconfont.woff2') format('woff2'),
+      url('../font/foot-font/iconfont.woff') format('woff'),
+      url('../font/foot-font/iconfont.ttf') format('truetype'),
+      url('../font/foot-font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,324 @@
+@mixin mg($tp:0,$rt:0,$bt:0,$lt:0){
+    margin:$tp $rt $bt $lt;
+}
+@mixin pd($tp:0,$rt:0,$bt:0,$lt:0){
+    padding:$tp $rt $bt $lt;
+}
+@mixin fc($f:22px,$c:#333333){
+    font-size: $f;
+    color:$c;
+}
+$color:#ff6700;
+$lineColor:#e0e0e0;
+.confirmHeader div:first-of-type a:hover>span{
+                transform: translate(50px);
+            }
+.confirmHeader{
+    overflow: hidden;
+    height:100px;
+    >div:first-of-type{
+        a{
+            display: inline-block;
+            width:50px;
+            height:50px;
+            margin-top:25px;
+            background: $color;
+            overflow: hidden;
+            position: relative;
+           
+            >span{
+                transition: all 1s;
+                display: inline-block;
+                width:50px;
+                text-align: center;
+                line-height:50px;
+                font-size: 32px;
+                color:#fff;
+                position: absolute;
+            }
+            >span:last-of-type{
+                left:-50px;
+                top:0;
+            }
+        }
+        >span{
+            @include fc(32px);
+            vertical-align: middle;
+                line-height:50px;
+                position: relative;
+                bottom: 20px;
+                margin-left: 60px;
+        }
+    }
+    >div:last-of-type{
+        span{
+            color:#757575;
+            font-size: 12px;
+            line-height: 100px;
+        }
+        span:nth-of-type(3){
+            color: #e2e0e5;
+        }
+        span:nth-of-type(2){
+            display: inline-block;
+            width:0;
+            height:0;
+            border: 5px solid transparent;
+            border-top:5px solid gray;
+        }
+    }
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font_gryw9uqn19n/iconfont.eot');
+  src: url('../font_gryw9uqn19n/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../font_gryw9uqn19n/iconfont.woff2') format('woff2'),
+      url('../font_gryw9uqn19n/iconfont.woff') format('woff'),
+      url('../font_gryw9uqn19n/iconfont.ttf') format('truetype'),
+      url('../font_gryw9uqn19n/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button{
+    cursor: pointer;
+}
+section{
+    background: #f5f5f5;
+    @include pd($tp:48px,$bt:48px);
+    >div.mid:first-of-type{
+        position: relative;
+        width:1084px;
+       @include pd(60px,58px,0,58px);
+       background: #fff;
+       .top>{
+          h3{
+              @include fc();
+          }
+          ul{
+             overflow: hidden;
+             li{
+                float:left;
+                border:1px solid #e0e0e0;
+                @include pd(26px,30px,52px,30px);
+                @include mg($tp:28px,$rt:22px);
+                width:272px;
+                height:120px;
+                 h4{
+                    font-size: 22px;
+                    color:#333333;
+                    margin-bottom: 28px;
+                }
+                p{
+                    line-height: 24px;
+                    color:#757575;
+                }
+             }
+             li:last-child{
+                text-align: center;
+                img{
+                    margin-top:40px;
+                }
+                p{
+                    color:#b0b0b0;
+                    margin-top:10px;
+                }
+             }
+          } 
+        }     
+    } 
+}
+.favourable{
+    >h3{
+       @include fc();
+       margin-top:42px;
+       border-bottom: 1px solid #e0e0e0;
+       padding-bottom: 16px;
+    }
+    ul{
+        @include pd(20px,0,22px,0);
+        border-bottom: 1px solid $lineColor;
+        li{
+        padding-left: 10px;
+        a{
+            margin-left:10px;
+            vertical-align: middle;
+            color:#333333;
+            display: inline-block;
+            width:400px;
+            cursor: pointer;
+            label{
+                display: inline-block;
+                width:55px;
+                background:#ff6700;
+                @include fc(13px,#fff);
+                text-align: center;
+                line-height: 23px;
+                margin-left:14px;
+                cursor: pointer;
+            }
+        }
+        >span{
+            display: inline-block;
+            width:90px;
+            text-align: center;
+        }
+        >span:first-of-type{
+            color:#333333;
+            vertical-align: middle;
+            margin-left:250px;
+        }
+        >span:last-of-type{
+            color:$color;
+            vertical-align: middle;
+            margin-left:170px;
+        }
+    }
+    li:nth-of-type(n+2){
+        margin-top:36px;
+    }
+  }
+}
+.shippingMethod{
+    @include pd(43px,0,43px,0);
+    border-bottom:1px solid $lineColor;
+    >span:first-of-type{
+        @include fc();
+    }
+    >span:last-of-type{
+        @include fc(16px,$color);
+        margin-left: 98px;
+    }
+}
+.bill{
+    .billTop{
+        margin-top:40px;
+        >span{
+            @include fc();
+        }
+        ul{
+            display: inline-block;
+            margin-left: 142px;
+            li{
+                margin-right:24px;
+                float:left;
+                cursor: pointer;
+                a{
+                     @include fc(16px,$color);
+                }
+            }
+        }
+    }
+    .billContent{
+        overflow: hidden;
+        margin-top:86px;
+        padding-bottom: 28px;
+        ul{
+            li:nth-of-type(n+2){
+                margin-top:34px;
+            }
+        }
+        >div{
+            >div:first-of-type{
+                text-align: right;
+                 span{
+                      @include fc(17px,#757575);
+                      display: block;
+                      margin-top:12px;
+                 }  
+                 span:last-of-type{
+                     position: relative;
+                     top:9px;
+                 } 
+            }
+            >div:last-of-type{
+                text-align: right;
+                width:110px;
+                 span{
+                      @include fc(17px,$color);
+                      display: block;
+                      margin-top:12px;
+                 }
+                 span:last-of-type{
+                     font-size: 28px;
+                 }   
+            }
+        }
+        >p{
+            clear: both;
+            height:1px;
+            background: $lineColor;
+            position: relative;
+            top:30px;
+        }
+        
+    }
+}
+.billBtn{
+            clear: both;
+            margin-top:60px;
+            button{
+                width:200px;
+                line-height:50px;
+                border: none;
+                outline: none;
+                font-size: 17px;
+            }
+     button:first-of-type{
+                color:#bababa;
+                border: 1px solid $lineColor;
+        }
+     button:last-of-type{
+                color:#fff;
+                background:$color;
+                margin-left:38px;
+        }
+}
+.useCard{
+    width: 1084px;
+    padding: 0 58px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    background: #fff;
+    margin-top: 50px;
+    >div:first-of-type{
+        padding-top:20px;
+    }
+    >div:nth-of-type(2){
+            >div:first-of-type{
+                text-align: right;
+                 span{
+                      @include fc(17px,#757575);
+                      display: block;
+                      margin-top:12px;
+                 }  
+                 span:last-of-type{
+                     position: relative;
+                     top:9px;
+                 } 
+            }
+            >div:last-of-type{
+                text-align: right;
+                width:110px;
+                 span{
+                      @include fc(17px,$color);
+                      display: block;
+                      margin-top:12px;
+                 }
+                 span:last-of-type{
+                     font-size: 28px;
+                 }   
+            }
+    }
+    >p{
+        clear: both;
+        height:1px;
+        background: $lineColor;
+        position: relative;
+        top:30px;
+    }
+}
